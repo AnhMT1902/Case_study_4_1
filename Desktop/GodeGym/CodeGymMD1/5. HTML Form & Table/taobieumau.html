@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tạo biểu mẫu (form)</title>
+</head>
+<body>
+    <!--  thuộc tính action (quy định nới dữ liệu được gửi đến)  -->
+    <form action="https://www.google.com.vn/">
+        <input type="text" name="q"/>
+        <input type="submit" value="tìm kiếm">
+    </form>
+    <!--  Thuộc tính method (nơi quy định cách thức dữ liệu được gửi lên sever <get và post)  -->
+    <!--    thẻ <fieldset> và thẻ <legend> để nhóm các dữ liệu của biểu mẫu lại với nhau-->
+    <form action="/action_page.php">
+        <fieldset>
+            <legend>Nhâp họ và tên</legend>
+                First name:<br>
+                <input type="text" value="Mickey"><br>
+                Last name:<br>
+                <input type="text" name="lastname" value="Mouse"><br><br>
+                <input type="submit" value="Submit">
+        </fieldset>
+    </form>
+    <form action="http://youtube.com/search">
+        <input type="text" name="q"/>
+        <input type="submit" value="tìm">
+    </form>
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ex9</title>
+</head>
+<body>
+<input type="number" id="inp1" placeholder="nhập a">
+<input type="number" id="inp2" placeholder="nhập b">
+<button onclick="hi()">a->b</button>
+<button onclick="he()">chia 7 dư 4</button>
+<button onclick="ha()"> tổng a->b</button>
+<button onclick="ho()"> đếm số chia 7 dư 4</button>
+<button onclick="hu()">tichsa*b||thich->b</button>
+<hr>
+<h2 id="out"></h2>
+<script>
+    function hi() {
+        document.getElementById('out').innerHTML = '';
+        a = document.getElementById('inp1').value;
+        b = document.getElementById('inp2').value;
+        let i
+        for (i = a; i <= b; i++) {
+            document.getElementById('out').innerHTML += i + ' ';
+        }
+    }
+
+    function he() {
+        document.getElementById('out').innerHTML = '';
+        a = document.getElementById('inp1').value;
+        b = document.getElementById('inp2').value;
+        let i
+        for (i = a; i <= b; i++) {
+            if (i%7==4) {
+                document.getElementById('out').innerHTML += i + ' ';
+            }
+        }
+    }
+
+    function ha() {
+        document.getElementById('out').innerHTML = '';
+        a = +document.getElementById('inp1').value;
+        b = +document.getElementById('inp2').value;
+        let i
+        let sum = 0
+        for (i = a; i <= b; i++) {
+            sum = sum + i;
+        }
+        document.getElementById('out').innerHTML += sum;
+    }
+
+    function ho() {
+        document.getElementById('out').innerHTML = '';
+        a = document.getElementById('inp1').value;
+        b = document.getElementById('inp2').value;
+        let i;
+        let dem = 0;
+        for (i = a; i <= b; i++) {
+            if (i%7==4) {
+                dem ++;
+            }
+        }
+        document.getElementById('out').innerHTML += dem;
+    }
+
+    function hu() {
+        document.getElementById('out').innerHTML = '';
+        a = document.getElementById('inp1').value;
+        b = document.getElementById('inp2').value;
+        let i;
+        let tich = 1;
+        if (a > b) {
+                tich = a * b;
+        } if (a < b) {
+            for (i = a; i <= b; i++) {
+                tich = tich * i;
+            }
+        }
+        document.getElementById('out').innerHTML += tich;
+    }
+</script>
+</body>
+</html>

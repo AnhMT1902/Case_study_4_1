@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Faking Textarea Typing</title>
+</head>
+<body>
+<center>
+    <h1>Faking Textarea Typing</h1>
+    <textarea onkeydown="nhan()" id="inp" cols="30" rows="10"></textarea>
+</center>
+</body>
+</html>
+<script>
+    let a = [1,2,3,4,5];
+
+    let str =''
+    let i=0
+    function nhan() {
+            str += a[i];
+            document.getElementById('inp').innerHTML = b;
+             i++
+    }
+</script>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai5</title>
+</head>
+<body>
+<script>
+    let arr1 = ['Polaris', 'Aldebaran', 'Deneb', 'Vega', 'Altair', 'Dubhe', 'Regulus'];
+    let arr2 = ['Ursa Minor', 'Tarurus', 'Cygnus', 'Lyra', 'Aquila', 'Ursa Major', 'Leo'];
+
+    function isStar() {
+        let index = arr1.indexOf(inp);
+        console.log(index)
+        if (index>=0) {
+            document.write(arr2[index]);
+        } else {
+            document.write('deo thay')
+        }
+    }
+
+    let inp = prompt('Nhập vào ngôi sao: ')
+    isStar(inp);
+</script>
+</body>
+</html>

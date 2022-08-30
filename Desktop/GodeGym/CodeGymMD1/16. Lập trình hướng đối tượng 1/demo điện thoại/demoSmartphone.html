@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>demo điện thoại</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="iphone">
+    <div class="screen__Mesage__Iphone">hiqưd</div>
+    <div class="screen">
+        <p class="time"></p>
+        <div class="boder__charging" style="margin-top:-29px ">
+            <p id="charging1" style="margin: 0px">20</p>
+        </div>
+    </div>
+    <button class="on-of" id="onIphone" onclick="powerButtonIphone()" value="false"></button>
+    <button onclick="chargingIphone()" class="charging">charge</button>
+    <div class="mesage" style="margin-top: 1040px">
+        <input type="text" name="" id="mesageIphone">
+        <button onclick="sentMesageIphone()" class="sentMasage">send</button>
+    </div>
+</div>
+<div class="samsung">
+    <div class="screen__Mesage__Samsung">hiqưd</div>
+    <div class="screen">
+        <p class="time"></p>
+        <div class="boder__charging">
+            <p id="charging2" style="margin: 0px">30</p>
+        </div>
+    </div>
+    <button class="on-of" id="onSamsung" onclick="powerButtonSamsung()" value="0"></button>
+    <button onclick="chargingSamsung()" class="charging">charge</button>
+    <div name="" class="mesage">
+        <input type="text" id="mesageSamsung">
+        <button onclick="sentMesageSamsung()" class="sentMasage">send</button>
+    </div>
+</div>
+<script src="./smartphone.js"></script>
+</body>
+</html>

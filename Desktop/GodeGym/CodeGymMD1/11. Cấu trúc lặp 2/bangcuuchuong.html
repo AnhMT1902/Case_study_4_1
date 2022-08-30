@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BẢNG CỬU CHƯƠNG</title>
+</head>
+<body>
+<h1>Bảng cửu chương</h1>
+<script>
+    let bang, i, j;
+    bang = "<table border='1' width='300' cellspacing='0' cellpadding='3'>"
+    for (i = 1; i <= 10; i++) {
+        bang = bang + "<tr>";
+        for (j = 1; j <= 10; j++) {
+            bang = bang + "<td>" + j + '*' + i + '=' + i * j + "</td>"
+        }
+        bang = bang + "</tr>";
+    }
+    bang = bang + "<tr>"
+    bang = bang + "<td>"
+    bang = bang + "hi";
+    bang = bang + "</td>"
+    bang = bang + "<td>"
+    bang += "<button>" + "he" + "</button>";
+    bang = bang + "</td>"
+    bang = bang + "</tr>"
+    bang = bang + "</table>";
+    document.write(bang);
+    f
+</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ham kiem tra so nguyen to</title>
+</head>
+<body>
+<script>
+    function isPrime(a) {
+        let dem = 0;
+        if (a < 2) {
+            document.write(`${a} khong la SNT`)
+        } else {
+            for (let i = 2; i < a; i++) {
+                if (a % i === 0) {
+                    dem++;
+                    break;
+                }
+            }
+            if (dem == 0) {
+                document.write(`${a} la SNT`)
+            } else {
+                document.write(`${a} khong la SNT`)
+            }
+        }
+
+    }
+
+    let SNT = +prompt('nhap so');
+    isPrime(SNT);
+</script>
+</body>
+</html>

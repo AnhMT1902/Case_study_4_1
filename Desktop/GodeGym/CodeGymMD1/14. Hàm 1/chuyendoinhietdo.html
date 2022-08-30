@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyen doi nhiet do</title>
+</head>
+<body>
+<div>
+    <h1>Temperature Converter</h1>
+    <p>Type a value in the Fahrenheit field do convert the value to Celcius</p>
+    <div style="display: flex; align-items: flex-start">
+        <p>Fahrenheit &nbsp;</p>
+        <p><input oninput="writeR()" type="number" id="inpFah"
+                  placeholder="Fahrenheit"></p>
+    </div>
+    <div style="display: flex; align-items: flex-start">
+        <p>Celcius: &nbsp;</p>
+        <p id="outCel"></p>
+
+    </div>
+</div>
+</body>
+</html>
+<script>
+
+    function temperatureConverter() {
+        let valNum = document.getElementById('inpFah').value;
+        valNum = parseFloat(valNum);
+        let Cel = (valNum - 32) / 1.8;
+        return Cel;
+    }
+
+    function writeR() {
+        document.getElementById('outCel').innerHTML = temperatureConverter();
+    }
+
+
+</script>

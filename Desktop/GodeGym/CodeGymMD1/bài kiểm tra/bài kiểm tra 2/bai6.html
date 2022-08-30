@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <input id="a" type="text" placeholder="Nhập a">
+  <input id="b" type="text" placeholder="Nhập b">
+  <button onclick="nhan()">nhấn đi</button>
+    <p id="out"> số số hạng chia hết cho 5 trong khoảng a->b </p>
+</head>
+<body>
+<script>
+ function nhan() {
+   let a = document.getElementById('a').value;
+   let b = document.getElementById('b').value;
+   let i;
+   let so = 0;
+   for (i = a; i <= b; i++) {
+     if (i % 5 == 0){
+       so += 1;
+     }
+   }document.getElementById('out').innerHTML = 'số số hạng chia hết cho 5 = ' + so;
+ }
+</script>
+</body>
+</html>

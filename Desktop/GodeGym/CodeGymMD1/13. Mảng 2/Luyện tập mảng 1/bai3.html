@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Bài 3</title>
+</head>
+<body>
+<script>
+  let a = [2, 32];
+  let max = a[0];
+  let sum = a[0];
+  let tbc;
+  for (let i = 1; i < a.length; i++) {
+    sum += a[i];
+    if (max < a[i]) {
+      max = a[i];
+    }
+  } tbc = sum/a.length;
+  console.log(max +' '+ tbc )
+</script>
+</body>
+</html>

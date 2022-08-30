@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra phần tử trong mảng</title>
+</head>
+<body>
+<script>
+  let x = [-3,5,1,3,2,10];
+  let y = +prompt('nhập số bạn muốn tìm');
+  for (let i = 1; i < x.length; i++) {
+    if (y == x[i]) {
+        console.log(" Value " + x[i] + " found at " + i);
+    } else{
+        console.log('không có số mà bạn muốn tìm');
+      break;
+    }
+  }
+</script>
+</body>
+</html>

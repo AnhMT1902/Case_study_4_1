@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra đối xứng</title>
+</head>
+<body>
+<script>
+    function IsPalindrome(s, start, end) {
+        if (end < 0) {
+            return true;
+        } else if (s[start] != s[end]) {
+            return false;
+        } else {
+            return IsPalindrome(a, start + 1, end - 1);
+        }
+    }
+
+    let a = prompt('nhap chuoi doi xung');
+    console.log(IsPalindrome(a, 0, a.length - 1))
+</script>
+</body>
+</html>

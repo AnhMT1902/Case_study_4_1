@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xếp hạng học lực</title>
+</head>
+<body>
+<script>
+  let kt = +prompt('nhập điểm kiểm tra');
+  let gk = +prompt('nhập điểm giữa kỳ');
+  let ck = +prompt(' nhập điểm cối kì');
+  dtb = (kt + gk + ck) / 3;
+  if (dtb < 5) {
+      alert('ngu');
+  } else if (dtb < 8) {
+      alert('thằng này khá');
+  } else {
+      alert('giỏi thế');
+  }
+</script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+<script>
+  let weigh = prompt(' nhập cân nặng');
+  let height = prompt('nhập chiều cao');
+  let bim = weigh / ( height * height );
+  if (bim < 18.5 ) {
+    alert('Underweight');
+  } else if ( bim < 25 ) {
+    alert('Normal');
+  } else if ( bim < 30 ) {
+    alert('Overweight');
+  } else {
+    alert('Obese')
+  }
+</script>
+</body>
+</html>

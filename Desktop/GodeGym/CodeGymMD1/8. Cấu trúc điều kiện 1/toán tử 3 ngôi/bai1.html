@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<button id="btn" onclick="thaydoi()" style="position: absolute">A</button>
+<script>
+  let a = prompt("a: ");
+  let b = prompt("b: ");
+  result = (a + b < 4) ? 'Below' : 'Over';
+  document.write(result)
+  function thaydoi() {
+      document.getElementById('btn').style.left = '300px'
+  }
+</script>
+</body>
+</html>

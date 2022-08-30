@@ -1,0 +1,15 @@
+.header{
+    text-align: center;
+    background-color: #fc5305;
+    color:white;
+    font-size: 30px;
+}
+.info{
+    text-align: right;
+}
+tr,td{
+    padding: 10px;
+}
+.checkbox__1{
+    width: 33%;
+}

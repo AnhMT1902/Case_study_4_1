@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<script>
+    function insertNumberToArray(arr, x, index) {
+        console.log(arr)
+        let res = []
+        if (index < 0 || index > arr.length) {
+            res = arr;
+            return res;
+        } else {
+            for (let i = 0; i < index; i++) {
+                res[i] = arr[i];
+            }
+            res[index] = x ;
+            for (let i = index + 1; i <= arr.length ; i++) {
+                res[i] = arr[i - 1];
+            }
+        }
+        return res;
+    }
+
+    let array = prompt('nhap mang so nguyen').split('');
+    let x = prompt('nhap x');
+    let index = +prompt('nhap vi tri');
+    document.write(insertNumberToArray(array, x, index));
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Doi tu Met sang Feet va nguoc lai</title>
+</head>
+<body>
+<script>
+  function MetertoFeet(met) {
+   let feet = met * 3.279;
+   return feet;
+  }
+  function FeettoMeter(feet) {
+  let met = feet * 0.305;
+  return met;
+  }
+  let a = prompt('nhap meter');
+  let b = prompt('nhap feed');
+  document.write(`${a} meter = ${MetertoFeet(a)} feed`);
+  document.write('<br>');
+  document.write(`${b} feet = ${FeettoMeter(b)} meter`);
+</script>
+</body>
+</html>

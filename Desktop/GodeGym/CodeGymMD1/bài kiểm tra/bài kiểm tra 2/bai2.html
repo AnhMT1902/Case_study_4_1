@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<input id="n" type="text">
+<button onclick="out()">ấn đi</button>
+<h2 id="kq"> kết quả :</h2>
+<script>
+    //cách 1
+    // let n = prompt('nhập n')
+    // let i;
+    // for (i = 1; i <= n; i++) {
+    //   document.write(i+'<br>');
+    // }
+
+    //cách 2:
+    // let n = prompt('nhập n')
+    // let i;
+    // for (i = 1; i <= n; i++) {
+    //     console.log(i);
+    // }
+
+    // cách 3:
+    // let n = prompt('nhập n')
+    // let i;
+    // for (i = 1; i <= n; i++) {
+    //     alert(i);
+    // }
+    function out() {
+      n = document.getElementById('n').value;
+        let i;
+        for (i = 1; i <= n; i++) {
+           document.getElementById('kq').innerHTML += i ;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 1</title>
+</head>
+<body>
+<script>
+    let Minh = [10, 9, 9.5];
+    let Hieu = [8, 7, 6.5];
+    let Vu = [7, 4.5, 5];
+
+    function findAvg(arr) {
+        let sum = 0;
+        let AVG;
+        for (let i = 0; i < arr.length; i++) {
+            sum = sum + arr[i];
+        }
+        AVG = sum / arr.length;
+        return AVG;
+    }
+    document.write(findAvg(Minh));
+    document.write("<br>");
+    document.write(findAvg(Hieu));
+    document.write("<br>");
+    document.write(findAvg(Vu));
+</script>
+</body>
+</html>

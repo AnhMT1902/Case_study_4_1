@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>game đoán số</title>
+</head>
+<body>
+<script>
+    let n = +prompt('nhập khoảng mà bạn muốn đoán');
+    let randomer = Math.floor(Math.random() * n);
+    let so;
+    let random = 0;
+    let inp = false;
+    while (inp == false) {
+        so = +prompt('số bạn muốn đoán là');
+        if (so > randomer) {
+            alert('số bạn chọn lớn hơn đáp án');
+        } else if (so < randomer) {
+            alert('số bạn chọn nhỏ hơn đáp án');
+        } else if (so == randomer) {
+            inp = true;
+            alert('bạn đã thắng');
+            break
+        }
+        random++;
+        if (random == 4) {
+            alert('bạn đã thua');
+            break;
+        }
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,8 @@
+git clone link... (clone 1 du an ve may)
+git init
+git add .
+git commit -m"ghi chu commit"
+git remote rm origin (nếu bước dưới ko thực hiện được)
+git remote add origin link...
+git push origin master 
+git pull		(cap nhat thay doi tren github)

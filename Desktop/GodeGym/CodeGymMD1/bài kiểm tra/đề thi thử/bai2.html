@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 2</title>
+</head>
+<body>
+<script>
+    function tryRemoveFromArray(arr, x) {
+            for (let i = 0; i < arr.length; i++) {
+                while (x === arr[i]) {
+                    arr.splice(i,1);
+                }
+            }
+            return arr;
+    }
+
+
+    let arr = [1, 1, 1, 1, 1, 1, 1, 2, 4, 5, 4, 1, 1, 1, 1, 1];
+    let firtNumber = 1;
+    alert(tryRemoveFromArray(arr, firtNumber));
+</script>
+</body>
+</html>

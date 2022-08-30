@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài kiểm tra 1</title>
+</head>
+<body>
+<!--&lt;!&ndash;bài 3:&ndash;&gt;-->
+    <input id="inp1" type="text">
+    <input id="inp2" type="text">
+    <input id="inp3" type="text">
+<!--    <h1 id="ketqua">kết quả sẽ hiển thị ở đây</h1>-->
+<!--    <button onclick="tich()">tích</button>-->
+<!--bài 4:-->
+<button onclick="S()" id="S">chu vi, diện tích</button>
+<button onclick="C()" id="C">a^2, a^b</button>
+<button onclick="T()" id="T">tổng a đến b</button>
+<button onclick="year()" id="year"> thế kỉ</button>
+<button onclick="TG()" id="kt"> kiểm tra tam giác</button>
+<p id="out"> kết quả sẽ hiển thị ở đây</p>
+</body>
+</html>
+<script>
+    // // bài 1:
+    // let name = prompt('nhập tên của bạn');
+    // alert('tên của bạn là ' + name);
+    // //  bài 2:
+    // let a = document.getElementById('inp').value;
+    // let b = a * a;
+    // alert('bình phương của a = ' + b);
+    // // bài 3:
+    // function tich() {
+    //     let a2 = document.getElementById('inp2').value;
+    //     let a2 = document.getElementById('inp2').value;
+    //     let tich = a1 * a2;
+    //     document.getElementById('ketqua').innerHTML = 'tích = ' + tich;
+    // }
+    //bài 4:
+    function S() {
+        let a1 = document.getElementById('inp1').value;
+        let a2 = document.getElementById('inp2').value;
+        let c = (a1 + a2) * 2;
+        let s = a1 * a2;
+        document.getElementById('out').innerHTML = 'chu vi = ' + c + ', diện tích = ' + s;
+    }
+    function C() {
+        let a1 = document.getElementById('inp1').value;
+        let a2 = document.getElementById('inp2').value;
+        let c = a1 * a1;
+        let s = Math.pow(a1, a2);
+        document.getElementById('out').innerHTML = 'bình phương a = ' + c + ', a mũ b = ' + s;
+    }
+    function T() {
+        let a1 = +document.getElementById('inp1').value;
+        let a2 = +document.getElementById('inp2').value;
+        let c = (a2 - a1 + 1) * ((a1 + a2) /2);
+        document.getElementById('out').innerHTML = 'tổng = ' + c;
+    }
+    function year() {
+        let a1 = document.getElementById('inp1').value;
+        let theky = Math.ceil(a1 / 100);
+        document.getElementById('out').innerHTML = 'năm ' + a1 + ' thuộc thế kỷ ' + theky;
+    }
+    function TG() {
+        let a1 = +document.getElementById('inp1').value;
+        let a2 = +document.getElementById('inp2').value;
+        let a3 = +document.getElementById('inp3').value;
+        console.log(a1, a2, a3)
+        if (a1 > 0 && a2 > 0 && a3 > 0 && a1 + a2 > a3 && a1 + a3 > a2 && a3 + a2 > a1 ) {
+            document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác';
+        } if ( a1 === a2 || a2 === a3 || a1 === a3 ) {
+            document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác cân';
+        } if (a1 == a2 && a1 == a3) {
+            document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác đều';
+        } if(Math.pow(a1 , 2) + Math.pow(a2 , 2) == Math.pow(a3 , 2) || Math.pow(a1 , 2) + Math.pow(a3 , 2) == Math.pow(a2 , 2) || Math.pow(a3 , 2) + Math.pow(a2 , 2) == Math.pow(a1 , 2)) {
+            document.getElementById('out').innerHTML = 'a1 , a2, a3 là 3 cạnh của một tam giác vuông';
+        }
+    }
+</script>

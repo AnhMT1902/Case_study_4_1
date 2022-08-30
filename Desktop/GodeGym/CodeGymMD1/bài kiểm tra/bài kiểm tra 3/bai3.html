@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    // function sumOfListPrime(x) {
+    //     let sum = 0;
+    //
+    //     if (x < 2) {
+    //         sum = 0
+    //     } else {
+    //         for (let i = 2; i <= x; i++) {
+    //             let dem = 0;
+    //             for (let j = 2; j < i; j++) {
+    //                 if (i % j === 0) {
+    //                     dem++;
+    //                     break;
+    //                 }
+    //             }
+    //             if (dem == 0) {
+    //                 console.log(i)
+    //                 sum += i;
+    //             }
+    //         }
+    //     }
+    //     return sum;
+    // }
+
+    function isPrime(x) {
+    let flag = true
+        for (let i = 2; i < x; i++) {
+            if (x % i == 0) {
+                flag = false;
+            }
+        }
+        return flag;
+    }
+
+    function sumOfListPrime(x) {
+        let sum = 0;
+        for (let i = 2; i <= x; i++) {
+            if (isPrime(i)) {
+                sum += i;
+            }
+        }
+        return sum;
+    }
+
+    let x = +prompt('nhap x');
+    document.write(`tổng từ 1 đến x = ${sumOfListPrime(x)}`);
+</script>
+</body>
+</html>

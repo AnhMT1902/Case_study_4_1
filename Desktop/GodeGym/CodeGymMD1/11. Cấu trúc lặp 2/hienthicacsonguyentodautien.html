@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>kiểm tra số nguyên tố</title>
+</head>
+<body>
+<script>
+    let demSNT = 0;
+    let so = 2;
+    while (demSNT <= 20) {
+        let laSNT = true;
+        for (let i = 2; i < so; i++) {
+            if (so % i == 0) {
+                laSNT = false;
+                break;
+            }
+        } if (laSNT) {
+            document.write(so + ' ');
+            demSNT ++;
+        }
+        so ++;
+    }
+
+
+</script>
+</body>
+</html>

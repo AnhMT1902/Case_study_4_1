@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xay dung hinh tron</title>
+</head>
+<body>
+<script>
+  class Circle {
+      constructor(radius,color) {
+      this.radius = radius;
+      this.color = color;
+      }
+      getRadius() {
+          return this.radius;
+      }
+      getArea() {
+          return Math.PI* this.radius * this.radius;
+      }
+      getInfo(){
+          alert(`r = ${this.getRadius()}, S = ${this.getArea()}`)
+      }
+  }
+  let circle1 = new Circle(4);
+  let circle2 = new Circle(5);
+  let circle3 = new Circle(6);
+  let circle4 = new Circle(7);
+  circle1.getInfo();
+  circle2.getInfo();
+  circle3.getInfo();
+  circle4.getInfo();
+
+</script>
+</body>
+</html>

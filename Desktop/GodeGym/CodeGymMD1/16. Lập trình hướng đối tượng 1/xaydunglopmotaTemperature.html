@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả Temperature</title>
+</head>
+<body>
+<script>
+    class Temperature {
+        constructor(C) {
+            this.C = C;
+        }
+
+        CtoK() {
+            let  K = this.C  + 273.15;
+                document.write('Nhiệt độ K: ' + K + '<br>');
+        }
+        CtoF() {
+            let F = (this.C-32)/1.8;
+            document.write('Nhiệt độ F: ' + F);
+        }
+    }
+
+    let C1 = new Temperature(25);
+    C1.CtoK();
+    C1.CtoF();
+</script>
+</body>
+</html>

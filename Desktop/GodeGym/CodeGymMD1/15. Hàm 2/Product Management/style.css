@@ -1,0 +1,15 @@
+table {
+    border-collapse:collapse;
+    width: 600px;
+    text-align: center;
+}
+
+th {
+    border: 1px solid white;
+    background-color: cornflowerblue;
+    color: white;
+}
+
+input {
+    width: 90%;
+}

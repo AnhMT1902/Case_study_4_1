@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Xây dựng lớp mô tả HCN</title>
+</head>
+<body>
+<input type="number" id="inp1" value="1">
+<input onchange="isRectangle()" type="number" id="inp2" value="1">
+<canvas id="myCanvas" width="1268px" height="575px" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+    class Rectangle {
+        constructor(long, wide) {
+            this.long = long;
+            this.wide = wide;
+        }
+
+        getInfo() {
+            let perimeter = isPerimeter(this.long, this.wide);
+            let area = isArea(this.long, this.wide);
+            console.log(`Long = ${this.long}, Wide = ${this.wide} Perimeter = ${perimeter}, Area = ${area}`)
+        }
+    }
+
+    function isPerimeter(long, wide) {
+        perimeter = 2 * (long + wide);
+        return perimeter;
+    }
+
+    function isArea(long, wide) {
+        area = long * wide;
+        return area;
+    }
+
+    function getRandomHex() {
+        return Math.floor(Math.random() * 225);
+    }
+
+    function getRandomColor() {
+        let red = getRandomHex();
+        let green = getRandomHex();
+        let blue = getRandomHex();
+        return "rgb(" + red + "," + blue + "," + green + ")";
+    }
+
+    function isRectangle() {
+        let ctx = document.getElementById('myCanvas').getContext('2d');
+        let long = +document.getElementById('inp1').value;
+        let wide = +document.getElementById('inp2').value;
+        let x = Math.random() * window.innerWidth;
+        let y = Math.random() * window.innerHeight;
+        let rectangle = new Rectangle(long, wide);
+        let color = getRandomColor();
+        rectangle.getInfo();
+        ctx.beginPath();
+        ctx.fillRect(x, y, long, wide);
+        ctx.fillStyle = color;
+        ctx.fill();
+    }
+</script>
+</body>
+</html>

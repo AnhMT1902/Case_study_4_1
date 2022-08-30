@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 3</title>
+</head>
+<body>
+<script>
+    let a = 'The Quick Brown Fox'
+    let s = ''
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] >= 'A' && a[i] <= 'Z') {
+            s += a[i].toLowerCase();
+        }else if (a[i] >= 'a' && a[i] <= 'z') {
+            s += a[i].toUpperCase();
+        } else s += a[i];
+    }
+    console.log(s);
+</script>
+</body>
+</html>

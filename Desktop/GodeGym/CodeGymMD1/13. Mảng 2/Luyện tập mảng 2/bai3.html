@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai3</title>
+</head>
+<body>
+<script>
+    let str = [];
+    let so = 0;
+    let dem = 0;
+
+    for (;;) {
+        let a = prompt('nhap mang')
+        if (a == ".") {
+            break;
+        }
+        str += a;
+    }
+    for (let i = 0; i < str.length; i++) {
+        if (str[i] >= 0 && str[i] <= 9) {
+            so++;
+        }
+    }
+    let arr = str.split('')
+    dem = arr.length
+    console.log(`mảng arr[${arr}] có ${dem} phần tử và ${so} ký tự số`)
+</script>
+</body>
+</html>

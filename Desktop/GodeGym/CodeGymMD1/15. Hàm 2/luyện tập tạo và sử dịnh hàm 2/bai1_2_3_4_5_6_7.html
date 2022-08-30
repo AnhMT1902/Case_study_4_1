@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bai1</title>
+</head>
+<body>
+<script>
+    let a = prompt('nhap a');
+    let b = prompt('nhap b');
+    let c = prompt('nhap c');
+
+    //bai 1
+    function BP(x) {
+        x * x
+        return x * x;
+    }
+
+    document.write(`binh phuong a = ${BP(a)}`)
+    document.write('<br>')
+
+    //bai2 chu vi, dien tich hinh tron
+    function S(x) {
+        s = Math.PI*x*x;
+        return s;
+    }
+
+    function C(x) {
+        c= 2 * Math.PI * x;
+        return c;
+    }
+    document.write(`dien tich hinh tron = ${S(a)}, chu vi hinh tron = ${C(a)}`);
+    document.write('<br>');
+
+    //bai3
+    function giaithua(x) {
+        let tich = 1;
+        for (let i = 1; i <= x; i++) {
+            tich *= i;
+        }
+        return tich;
+    }
+
+    document.write(`n! = ${giaithua(a)}`);
+    document.write('<br>');
+
+    //bai4
+    function KTso(x) {
+        let flag = '';
+        if (x >= 0 || x < 0) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        return flag;
+    }
+
+    document.write(KTso(a));
+    document.write('<br>');
+
+    //bai5
+    function isMin(x1, x2, x3) {
+        let min = x1;
+        if (min > x2) {
+            min = x2;
+        }
+        if (min > x3) {
+            min = x3;
+        }
+        return min;
+    }
+
+    document.write('min =' + isMin(a, b, c));
+    document.write('<br>');
+
+    //bai6
+    function KTsoduong(x) {
+        let flag = '';
+        if (x > 0) {
+            flag = true;
+        } else {
+            flag = false;
+        }
+        return flag;
+    }
+
+    document.write(KTsoduong(a));
+    document.write('<br>');
+
+    //bai7
+    function Doicho(x, y) {
+        let types = x;
+        x = y;
+        y = types;
+        document.write(`x = ${x} y = ${y}`);
+    }
+
+    Doicho(a, b);
+    document.write('<br>');
+
+
+</script>
+</body>
+</html>

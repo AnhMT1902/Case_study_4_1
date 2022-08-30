@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>bài 5</title>
+</head>
+<input type="text" name="" id="inp1" placeholder="nhập a">
+<input type="text" name="" id="inp2" placeholder="nhập b">
+<button onclick="nhan()">nhấn đi</button>
+<p id="out"></p>
+<body>
+<script>
+  // let a = prompt('nhập a')
+  // let b = prompt('nhập b')
+  // let i;
+  // for (i = a; i <= b; i++) {
+  //     if (i % 3 == 0){
+  //         alert(i);
+  //     }
+  // }
+  function nhan() {
+   let a = document.getElementById('inp1').value;
+   let b = document.getElementById('inp2').value;
+   let i;
+      for (i = a; i <= b; i++) {
+          if (i % 3 == 0){
+            document.getElementById('out').innerHTML += i + '<br>';
+          }
+      }
+  }
+</script>
+</body>
+</html>

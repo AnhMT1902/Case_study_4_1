@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>từ điển</title>
+</head>
+<body>
+<input type="text" placeholder="nhập từ" id="inp">
+<button onclick="dich()">Dịch</button>
+<h4 id="out"></h4>
+<script>
+  function dich() {
+      let vie = ['chuối','táo','bay','mèo'];
+      let eng = ['banana','apple','fly','cat'];
+      let inp1 = document.getElementById('inp').value;
+      for (let i = 0 ; i < vie.length;i++) {
+          if (inp1 == vie[i]  ) {
+              document.getElementById('out').innerHTML = eng[i];
+          } else if (inp1 == eng[i]  ) {
+              document.getElementById('out').innerHTML = vie[i];
+          }
+      }
+  }
+</script>
+</body>
+</html>

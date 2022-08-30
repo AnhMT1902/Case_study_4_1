@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    class Cat {
+        name;
+        weight;
+
+        constructor(x, y) {
+            this.name = x;
+            this.weight = y;
+        }
+
+        eat() {
+            this.weight++;
+        }
+
+        getInfo() {
+            alert(`thông tin là ${this.name}, ${this.weight}`)
+        }
+
+    }
+
+    class Mouse {
+        name;
+        hp;
+
+        constructor(x,y) {
+            this.name = x;
+            this.hp = y;
+        }
+
+        getTnfo(){
+            alert(`thông tin là ${this.name} ,  ${this.hp}`)
+        }
+        isĐie() {
+            this.hp < 0;
+        }
+    }
+
+</script>
+</body>
+</html>

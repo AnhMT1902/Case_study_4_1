@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Do you love me?</title>
+    <style>
+        body{
+            margin-top: 20%;
+        }
+    </style>
+</head>
+<body>
+<center>
+<h1>Do you love me?</h1>
+<button onclick="yeb()">Yes</button>
+<button style="position: absolute; top: 332px; left: 710px" id="noo" onmouseover="no()">No</button>
+</center>
+</body>
+</html>
+<script>
+  function yeb() {
+    alert('ME TOO')
+  }
+  function no() {
+      let maxH = Math.random()*700;
+      let maxW = Math.random()*700;
+    document.getElementById('noo').style.left = maxW + 'px';
+    document.getElementById('noo').style.top = maxH + 'px';
+      console.log(maxH,maxW)
+  }
+</script>

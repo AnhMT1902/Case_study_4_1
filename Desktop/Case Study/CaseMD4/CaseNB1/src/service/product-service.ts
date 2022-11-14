@@ -55,7 +55,7 @@ export class ProductService {
                     await image.mv('./public/img/' + image.name)
                     let img = {
                         id_product: id,
-                        image: `./img/${image.name}`
+                        image: `/img/${image.name}`
                     }
                     await this.imageRepository.saveImage(img)
                 }
@@ -132,8 +132,8 @@ export class ProductService {
                    from product
                             join image on product.id = id_product
                             join species on product.species = species.id
-                   where species.species = 'husky'
-                      or name like '%a%'
+                   where species.species = '${key}'
+                      or name like '%${key}%'
                    group by product.id`;
         return await this.productRepository.query(sql);
     }

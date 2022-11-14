@@ -52,15 +52,14 @@ export class ProductController {
         res.render('product/info', {product: product})
     }
     searchProduct = async (req: Request, res: Response) => {
-        let key = req.params.key
-
-        res.redirect(301, `/products/${key}`)
+        let key = req.body.key
+        res.redirect(301, `/products/search/${key}`)
     }
     showProductByKey = async (req: Request, res: Response) => {
         let key = req.params.key
         let products = await this.productService.findProductByKey(req, res, key)
-        res.render('index', {
-            listProducts: products
+        res.render('product/product', {
+            listProductsSearch: products
         })
     }
 }

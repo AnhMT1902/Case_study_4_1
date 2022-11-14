@@ -10,10 +10,10 @@
         <div class="navbar-nav ms-auto py-0">
             <div class="nav-item dropdown">
                 <!-- Search Form Start -->
-                <form action="product/search" method="post">
+                <form action="/products/search" method="post" enctype="multipart/form-data">
                     <div class="input-group">
-                        <input type="text" class="form-control p-3" placeholder="Keyword" required>
-                        <button class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
+                        <input name="key" type="text" class="form-control p-3" placeholder="Keyword" required>
+                        <button type="submit" class="btn btn-primary px-4"><i class="bi bi-search"></i></button>
                     </div>
                 </form>
                 <!-- Search Form End -->
@@ -22,7 +22,7 @@
                 <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">classify</a>
                 <div class="dropdown-menu m-0">
                     <a href="/products/search/husky" class="dropdown-item">husky</a>
-                    <a href="/products/search/corgy" class="dropdown-item">corgy</a>
+                    <a href="/products/search/corgi" class="dropdown-item">corgi</a>
                     <a href="/products/search/alaska" class="dropdown-item">alaska</a>
                 </div>
             </div>

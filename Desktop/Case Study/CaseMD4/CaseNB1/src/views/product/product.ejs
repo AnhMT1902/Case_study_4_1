@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="utf-8">
     <title>PET SHOP - Pet Shop Website Template</title>
@@ -33,7 +32,25 @@
 <body>
 <%- include('../parial/nav') %>
 
-
+<div class="container text-center">
+    <div class="row">
+        <% for (let i = 0; i < listProductsSearch.length; i++){ %>
+            <div class="col-3" style="margin-bottom: 20px">
+                <div class="product-item position-relative bg-light d-flex flex-column text-center">
+                    <img style="width: 100%; height: 250px; object-fit: cover"
+                         class="img-fluid mb-4" src="<%= listProductsSearch[i].image %>" alt="a">
+                    <h6 class="text-uppercase"><%= listProductsSearch[i].name %></h6>
+                    <h5 class="text-primary mb-0"><%= listProductsSearch[i].price %></h5>
+                    <div class="btn-action d-flex justify-content-center">
+                        <a class="btn btn-primary py-2 px-3" href=""><i class="bi bi-cart"></i></a>
+                        <a class="btn btn-primary py-2 px-3" href="/products/<%= listProductsSearch[i].id %>"><i
+                                    class="bi bi-eye"></i></a>
+                    </div>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
 
 <!-- JavaScript Libraries -->
 <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>

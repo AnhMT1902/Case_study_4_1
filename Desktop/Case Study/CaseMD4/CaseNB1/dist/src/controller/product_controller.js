@@ -31,6 +31,7 @@ class ProductController {
         this.showFormEdit = async (req, res) => {
             let id = +req.params.id;
             let product = await this.productService.findByID(req, res, id);
+            console.log(product)
             res.render('crud/edit', { products: product });
         };
         this.editProduct = async (req, res) => {

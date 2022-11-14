@@ -7,7 +7,7 @@ const image_service_1 = require("../service/image-service");
 class ProductService {
     constructor() {
         this.findByID = async (req, res, id) => {
-            let sql = `select *
+            let sql = `select * , s.id as id_species
                    from product
                             join image on product.id = id_product
                             join species s on product.species = s.id
@@ -67,7 +67,6 @@ class ProductService {
         };
         this.editByID = async (req, res, id) => {
             let files = req.files;
-            let lengthArr = files.length;
             if (files !== null) {
                 let product = req.body;
                 let sqlProduct = `update product
@@ -81,7 +80,9 @@ class ProductService {
                               where id = ${+id}`;
                 if (product.name.length > 0 && product.price > 0 && product.age > 0 && product.color.length > 0 && product.description.length > 0) {
                     await this.productRepository.query(sqlProduct);
+                    await this.imageRepository.deleteImage(id);
                     let arrayImage = files.image;
+                    let lengthArr = arrayImage.length;
                     if (!lengthArr) {
                         let image = arrayImage;
                         await image.mv('./public/img/' + image.name);
@@ -96,11 +97,12 @@ class ProductService {
                     }
                     else {
                         for (let index in arrayImage) {
+                            console.log(index);
                             let image = arrayImage[index];
                             await image.mv('./public/img/' + image.name);
                             let img = {
                                 id_product: id,
-                                image: `./img/${image.name}`
+                                image: `/img/${image.name}`
                             };
                             let sqlImage = `update image
                                         set image = '${img.image}'
